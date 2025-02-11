@@ -2,8 +2,8 @@ from PIL import Image
 import imagehash
 
 
-image1 = input("Enter Image Location :");
-image2 = input("Enter Image Location :");
+image1 = input("Enter Image Location :")
+image2 = input("Enter Image Location :")
 
 def image_hash(image1,image2):
     try:
@@ -14,7 +14,7 @@ def image_hash(image1,image2):
         return
 
     hammingDistance = hasha - hashb
-    # print(hammingDistance)
+    print(f"Hamming Distance : {hammingDistance}")
     if(hammingDistance == 0 ):
         print("Same Image")
         return
