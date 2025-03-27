@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgSim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>ImgSim</h1>
+        <h2>Image Similarity Detector</h2>
+        <p>Upload two images to compare their similarity. Select accuracy level from the dropdown.</p>
+
+        <div class="upload-container">
+            <div class="upload-box" onclick="triggerUpload('image1')">
+                <p>Upload Image 1</p>
+                <input type="file" id="image1" accept="image/*" hidden onchange="previewImage(event, 'preview1')">
+                <img id="preview1" src="" alt="" hidden>
+            </div>
+
+            <div class="upload-box" onclick="triggerUpload('image2')">
+                <p>Upload Image 2</p>
+                <input type="file" id="image2" accept="image/*" hidden onchange="previewImage(event, 'preview2')">
+                <img id="preview2" src="" alt="" hidden>
+            </div>
+        </div>
+
+        <label for="accuracy">Select Accuracy:</label>
+        <select id="accuracy"></select>
+    </div>
+
+    <footer>
+        <p>© 2025 ImgSim. All rights reserved.</p>
+        <a href="#">About</a> | <a href="#">Contact</a> | <a href="#">Privacy Policy</a> | <a href="https://github.com/">GitHub</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
